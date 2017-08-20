@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qJf-hI-Aei">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PopUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.80784313730000001" green="0.26274509800000001" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="a2u-nr-5th">
+                        <barButtonItem key="rightBarButtonItem" title="PopUp" id="Tui-0q-MUi">
+                            <connections>
+                                <action selector="didTapPopUp:" destination="BYZ-38-t0r" id="NK8-is-l5g"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+        </scene>
+        <!--Pop Up View Controller-->
+        <scene sceneID="cd6-ic-naT">
+            <objects>
+                <viewController storyboardIdentifier="PopUpViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yhR-73-ZXj" customClass="PopUpViewController" customModule="PopUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Iqv-NF-aO3"/>
+                        <viewControllerLayoutGuide type="bottom" id="wf5-vA-A2V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0wa-2S-dnN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ppq-na-Y1L">
+                                <rect key="frame" x="50" y="170" width="275" height="347"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atz-z2-oot">
+                                        <rect key="frame" x="211" y="8" width="56" height="20"/>
+                                        <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
+                                        <state key="normal" title="Dismiss">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dismissPopUp:" destination="yhR-73-ZXj" eventType="touchUpInside" id="qOS-L0-emf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.32549019610000002" green="0.73333333329999995" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="atz-z2-oot" secondAttribute="trailing" constant="8" id="N64-gn-STn"/>
+                                    <constraint firstItem="atz-z2-oot" firstAttribute="top" secondItem="Ppq-na-Y1L" secondAttribute="top" constant="8" id="hRB-ny-nt7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.67843137249999996" blue="0.30588235289999999" alpha="0.0" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ppq-na-Y1L" secondAttribute="trailing" constant="50" id="3vg-6a-cPz"/>
+                            <constraint firstItem="Ppq-na-Y1L" firstAttribute="leading" secondItem="0wa-2S-dnN" secondAttribute="leading" constant="50" id="KdK-TI-0tQ"/>
+                            <constraint firstItem="Ppq-na-Y1L" firstAttribute="top" secondItem="Iqv-NF-aO3" secondAttribute="bottom" constant="150" id="ld7-h4-LFd"/>
+                            <constraint firstItem="wf5-vA-A2V" firstAttribute="top" secondItem="Ppq-na-Y1L" secondAttribute="bottom" constant="150" id="n5e-CW-iCS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="popView" destination="Ppq-na-Y1L" id="hpW-HP-v1s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bcI-gi-80N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1092" y="910"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9I8-rT-JFe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qJf-hI-Aei" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AtC-CP-pVa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nRd-ao-UJI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TBV-Bz-zrx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="239" y="139"/>
+        </scene>
+    </scenes>
+</document>
